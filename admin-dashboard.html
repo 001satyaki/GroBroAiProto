@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard | GrowBroAi</title>
+  <link rel="stylesheet" href="admin-dashboard.css" />
+</head>
+<body>
+  <div class="admin-dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>GrowBroAi</h2>
+      <nav>
+        <a href="#" class="active">📊 Dashboard</a>
+        <a href="#" id="open-chat-tab">💬 Chatroom</a>
+        <a href="#" id="logout-btn">🚪 Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Panel -->
+    <main class="main-panel">
+      <header>
+        <h1>Welcome, Admin</h1>
+        <div class="search-filter">
+          <input type="text" id="searchBar" placeholder="Search by user or service..." />
+          <select id="statusFilter">
+            <option value="all">All</option>
+            <option value="Pending Approval">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+            <option value="Rejected">Rejected</option>
+            <option value="Cancelled">Cancelled</option>
+          </select>
+        </div>
+      </header>
+
+      <!-- Analytics Section -->
+      <section class="analytics">
+        <div class="card" id="total-orders">📦 Total Orders: 0</div>
+        <div class="card" id="total-revenue">💰 Total Revenue: 0</div>
+        <div class="card" id="active-clients">👥 Active Clients: 0</div>
+        <div class="card" id="notifications">🔔 New Requests: 0</div>
+      </section>
+
+      <!-- Orders -->
+      <section class="orders-section">
+        <h2>User Orders</h2>
+        <div class="orders-container" id="orders-container"></div>
+      </section>
+
+      <!-- 💬 Admin Chatroom Panel -->
+      <section class="chatroom-section hidden" id="admin-chatroom">
+        <h2>💬 Admin Chatroom</h2>
+        <div class="chat-interface">
+          <div class="user-list" id="user-list"></div>
+          <div class="chat-box">
+            <h3 id="chat-with">Select a user</h3>
+            <div class="messages" id="admin-chat-messages"></div>
+            <div class="chat-controls">
+              <input type="text" id="admin-chat-input" placeholder="Type reply..." />
+              <button id="admin-send">Send</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="admin-dashboard.js"></script>
+</body>
+</html>
+

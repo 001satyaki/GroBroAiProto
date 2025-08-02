@@ -1,0 +1,91 @@
+/* Reset & Base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('your-background.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+  }
+  
+  /* Container */
+  .register-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 3rem 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  /* Heading */
+  .register-container h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 2px black;
+  }
+  
+  .register-container span {
+    color: #0077ff;
+  }
+  
+  .subtitle {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+  }
+  
+  /* Form Inputs */
+  .register-form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.7rem 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .register-form input::placeholder {
+    color: #ddd;
+  }
+  
+  /* Button */
+  .register-form button {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #0077ff;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .register-form button:hover {
+    background-color: #005fcc;
+  }
+  
+  /* Alt Text */
+  .alt {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #ddd;
+  }
+  
+  .alt a {
+    color: #0077ff;
+    text-decoration: none;
+  }
+  

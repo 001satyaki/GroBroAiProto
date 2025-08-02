@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrowBroAi | AI-Powered Content Creation, UI/UX Design, Automation Services</title>
+  <meta name="description" content="GrowBroAi offers AI-powered services including content creation, UI/UX design, automation setups, and more to supercharge your business growth.">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+
+  <header id="navbar" class="navbar" data-aos="fade-down">
+    <div class="logo">
+      <h2>GrowBro<span class="highlight">Ai</span></h2>
+    </div>
+    <button id="menu-toggle" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+    <button id="theme-toggle" class="login-btn">🌙</button>
+    <nav id="nav-links" class="collapsed">
+      
+
+      <a href="Dashboard.html">Dashboard</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="#reviews">Reviews</a>
+      <button class="login-btn" onclick="location.href='login.html'">Login</button>
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+        <svg id="theme-icon" viewBox="0 0 24 24" fill="none" width="24" height="24">
+          <circle cx="12" cy="12" r="5" fill="currentColor" />
+        </svg>
+      </button>
+      
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home" data-aos="fade-up">
+    <div class="hero-content">
+      <h1 class="glow-text">GrowBroAi</h1>
+      <p class="subhead">AI-powered services to supercharge your business growth</p>
+      <button class="cta-btn pulse">Explore Services</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" data-aos="fade-up">
+    <div class="features-grid">
+      <div class="feature card-lift" data-aos="zoom-in" data-aos-delay="100">
+        <i class="fas fa-stopwatch"></i>
+        <h3>Delivered in 24 Hours</h3>
+      </div>
+      <div class="feature card-lift" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fas fa-cogs"></i>
+        <h3>Backed by AI Expertise</h3>
+      </div>
+      <div class="feature card-lift" data-aos="zoom-in" data-aos-delay="300">
+        <i class="fas fa-dollar-sign"></i>
+        <h3>Low Cost and Efficient</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services" data-aos="fade-up">
+    <h2 class="section-heading">Services We Provide</h2>
+    <div class="services-grid">
+      <div class="service-card hover-glow" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-pen-nib"></i>
+        <h3>Content Creation</h3>
+        <p>Blogs, social media posts, newsletters, and more.</p>
+      </div>
+      <div class="service-card hover-glow" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Design & Development</h3>
+        <p>Modern UI/UX design, website development, branding.</p>
+      </div>
+      <div class="service-card hover-glow" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-robot"></i>
+        <h3>Automation</h3>
+        <p>Automation for Instagram, YouTube, and Gmail.</p>
+      </div>
+      <div class="service-card hover-glow" data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-chart-line"></i>
+        <h3>Tech Odd Jobs</h3>
+        <p>PPTs, visualizations, AI photo mockups and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio" id="portfolio" data-aos="fade-up">
+    <h2 class="section-heading">Portfolio</h2>
+    <div class="swiper portfolio-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide portfolio-card">
+          <h3>Content Creation</h3>
+          <img src="content-creation-sample.jpg" alt="Content Creation Sample">
+          <p>Sample projects showcasing blogs and social media content.</p>
+        </div>
+        <div class="swiper-slide portfolio-card">
+          <h3>UI/UX Design</h3>
+          <img src="uiux-design-sample.jpg" alt="UI/UX Design Sample">
+          <p>Modern, responsive web designs for startups and businesses.</p>
+        </div>
+        <div class="swiper-slide portfolio-card">
+          <h3>Automation Setup</h3>
+          <img src="automation-sample.jpg" alt="Automation Setup Sample">
+          <p>Automation for Instagram, YouTube, Gmail and more.</p>
+        </div>
+        <div class="swiper-slide portfolio-card">
+          <h3>Branding Package</h3>
+          <img src="branding-sample.jpg" alt="Branding Package Sample">
+          <p>Full brand identity design for startups and creators.</p>
+        </div>
+        <div class="swiper-slide portfolio-card">
+          <h3>Business Presentation</h3>
+          <img src="business-presentation-sample.jpg" alt="Business Presentation Sample">
+          <p>Professional PPTs and visual storytelling for businesses.</p>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews -->
+  <section class="reviews" id="reviews" data-aos="fade-up">
+    <h2 class="section-heading">What Our Customers Say</h2>
+    <div class="reviews-grid">
+      <div class="review card-lift" data-aos="fade-up" data-aos-delay="100">
+        <p>"Top-notch articles! Audience engagement boosted!"</p>
+        <h4>Rachel - Content Creation</h4>
+      </div>
+      <div class="review card-lift" data-aos="fade-up" data-aos-delay="200">
+        <p>"Exactly what I envisioned. Nailed the UX!"</p>
+        <h4>Wan - UI/UX Design</h4>
+      </div>
+      <div class="review card-lift" data-aos="fade-up" data-aos-delay="300">
+        <p>"Super impressive landing page. Would recommend!"</p>
+        <h4>Lauren - UI/UX Design</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer data-aos="fade-up">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>GrowBroAi</h3>
+        <p>AI-boosted services tailored for your daily growth.</p>
+      </div>
+      <div class="footer-section links">
+        <h4>Links</h4>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="footer-section contact">
+        <h4>Contact</h4>
+        <p>Email: support@growbroai.com</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 GrowBroAi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Animation Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 40, density: { enable: true, value_area: 800 } },
+        color: { value: "#c4d7f2" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        move: { enable: true, speed: 1 }
+      }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var portfolioSwiper = new Swiper('.portfolio-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      loop: true
+    });
+  </script>
+</body>
+</html>

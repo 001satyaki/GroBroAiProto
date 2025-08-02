@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GrowBroAi | Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="logo">GrowBroAi</div>
+      <div class="profile">
+        <img src="https://via.placeholder.com/70" alt="User" />
+        <p id="username-display">User</p>
+      </div>
+      <nav>
+        <a href="#" class="active">🏠 Dashboard</a>
+        <a href="#">📦 My Services</a>
+        <a href="#">💬 Chat with GrowBro</a>       
+        <a href="index.html">🏠 Home</a>
+        <a href="#" id="logout-btn">🚪 Logout</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="welcome">
+        <h1>👋 Welcome back, <span id="user-name">User</span>!</h1>
+        <p>Here’s your growth snapshot.</p>
+      </header>
+
+      <section class="analytics">
+        <div class="card"><i class="fas fa-rocket"></i> <p>Active Projects</p><h3 id="active-projects">0</h3></div>
+        <div class="card"><i class="fas fa-clock"></i> <p>Pending Tasks</p><h3 id="pending-tasks">0</h3></div>
+        <div class="card"><i class="fas fa-clipboard-check"></i> <p>Recent Orders</p><h3 id="recent-orders">0</h3></div>
+        <div class="card"><i class="fas fa-coins"></i> <p>Credits</p><h3 id="credits">0</h3></div>
+      </section>
+
+      <section class="services">
+        <h2 class="section-title">Services</h2>
+        <div class="grid-cards">
+          <div class="card service">
+            <h4>Content Creation</h4>
+            <select class="service-dropdown">
+              <option value="">Choose a service</option>
+              <option value="SEO Blog Post" data-cost="200">SEO Blog Post - 200 credits</option>
+              <option value="Instagram Captions" data-cost="150">Instagram Captions - 150 credits</option>
+            </select>
+            <button class="btn request-service">Request</button>
+          </div>
+          <div class="card service">
+            <h4>UI/UX Design</h4>
+            <select class="service-dropdown">
+              <option value="">Choose a service</option>
+              <option value="Landing Page UI" data-cost="250">Landing Page UI - 250 credits</option>
+              <option value="Mobile App UI" data-cost="300">Mobile App UI - 300 credits</option>
+            </select>
+            <button class="btn request-service">Request</button>
+          </div>
+          <div class="card service">
+            <h4>Automation Setup</h4>
+            <select class="service-dropdown">
+              <option value="">Choose a service</option>
+              <option value="Email Automation" data-cost="180">Email Automation - 180 credits</option>
+              <option value="Instagram DM Bot" data-cost="220">Instagram DM Bot - 220 credits</option>
+            </select>
+            <button class="btn request-service">Request</button>
+          </div>
+        </div>
+      </section>
+      <section class="sample-section" id="sample-section" style="display:none;">
+        <h2>Samples for <span id="sample-service-name"></span></h2>
+        <div id="sample-cards" class="sample-card-grid"></div>
+      </section>
+      
+      <section class="progress-section">
+        <h2 class="section-title">Your Active Services</h2>
+        <div class="grid-cards" id="progress-cards"></div>
+      </section>
+    </main>
+  </div>
+  <div id="sample-form-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" id="close-form">&times;</span>
+      <h3>Tell us about your project</h3>
+      <form id="sample-details-form">
+        <input type="text" name="brand" placeholder="Brand name or product" required />
+        <input type="text" name="target" placeholder="Target audience" required />
+        <input type="text" name="colors" placeholder="Preferred color scheme" />
+        <input type="url" name="reference" placeholder="Reference website (optional)" />
+        <textarea name="notes" placeholder="Any additional notes"></textarea>
+        <button type="submit">Submit Details</button>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Floating Chat Icon -->
+<div class="chat-icon" id="open-chat">💬</div>
+
+<!-- Chat Popup -->
+<div class="chat-popup" id="chat-popup">
+  <div class="chat-header">
+    <h4>Chat with GrowBroAi</h4>
+    <button id="close-chat">&times;</button>
+  </div>
+  <div class="chat-tabs">
+    <button class="tab-btn active" data-tab="faq">FAQs</button>
+    <button class="tab-btn" data-tab="chat">Chat</button>
+  </div>
+  <div class="chat-content" id="faq-tab">
+    <ul class="faq-list">
+      <li><strong>How do I request a service?</strong><br>Choose a service, pick a sample, fill the form, and click request.</li>
+      <li><strong>How do I cancel?</strong><br>Go to "Your Active Services" and hit Cancel.</li>
+      <li><strong>How many credits do I get?</strong><br>Each user starts with 1000 credits.</li>
+    </ul>
+  </div>
+  <div class="chat-content hidden" id="chat-tab">
+    <div class="messages" id="chat-messages"></div>
+    <input type="text" id="chat-input" placeholder="Type a message..." />
+    <button id="send-chat">Send</button>
+  </div>
+</div>
+<script src="dashboard.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+ <!-- Services -->
+ <!--<section class="services">
+  <h2 class="section-title">Services</h2>
+  <div class="grid-cards">
+    <div class="card service">
+      <h4>Content Creation</h4>
+      <select class="service-dropdown">
+        <option value="">Choose a service</option>
+        <option value="Instagram reels template" data-cost="150">Instagram reels template - 150 credits</option>
+        <option value="Instagram Carousals" data-cost="100">Instagram carousal - 100 credits</option>
+        <option value="SEO Blog Post" data-cost="200">SEO Blog Post - 200 credits</option>
+        
+      </select>
+      <button class="btn request-service">Request</button>
+    </div>
+    <div class="card service">
+      <h4>Web Development</h4>
+      <select class="service-dropdown">
+        <option value="">Choose a service</option>
+        <option value="Ui/Ux Design" data-cost="250">Ui/Ux Design - 250 credits</option>
+        <option value="Web Development" data-cost="1000">Web Development - 1000 credits</option>
+      </select>
+      <button class="btn request-service">Request</button>
+    </div>
+    <div class="card service">
+      <h4>Automation Setup</h4>
+      <select class="service-dropdown">
+        <option value="">Choose a service</option>
+        <option value="Email Automation" data-cost="180">Email Automation - 180 credits</option>
+        <option value="Instagram DM Bot" data-cost="220">Instagram DM Bot - 220 credits</option>
+      </select>
+      <button class="btn request-service">Request</button>
+    </div>
+    <div class="card service">
+      <h4>Misclenious</h4>
+      <select class="service-dropdown">
+        <option value="">Choose a service</option>
+        <option value="Power Point Presentation" data-cost="500"> Power Point Presentation - 200 credits</option>
+        <option value="Data Analysis" data-cost="500"> Data Analysis - 300 credits</option>
+        <option value="Email Struturing and cleaning" data-cost="400"> Email Struturing and cleaning - 400 credits</option>
+        <option value="Windows file Structuring" data-cost="500"> Windows file Organising - 500 credits</option>
+        
+      </select>
+      <button class="btn request-service">Request</button>
+    </div>
+  </div>
+</section>-->

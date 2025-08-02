@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #0f0f1c;
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    text-align: center;
+  }
+  
+  .pricing-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .pricing-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .pricing-section .sub {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .toggle-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .toggle {
+    background: #1a1a2e;
+    color: #eee;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .toggle span {
+    color: #3f0187;
+  }
+  
+  .toggle.active {
+    background: #0077ff;
+    color: white;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .card {
+    background: linear-gradient(to bottom, #1b1b2e, #151526);
+    border-radius: 16px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .price {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .price span {
+    font-size: 1rem;
+    color: #aaa;
+  }
+  
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    color: #ccc;
+  }
+  
+  .card ul li {
+    margin: 0.5rem 0;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    background: #0077ff;
+  }
+  
+  .highlighted {
+    border: 2px solid #2e0a93;
+    background: radial-gradient(ellipse at top, #1e1e40, #131322);
+  }
+  
+  .btn.active {
+    background: #1f0481;
+    color: #000;
+  }
+  
+  @media (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

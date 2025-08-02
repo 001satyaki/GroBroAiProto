@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b0f1a;
+    color: white;
+    display: flex;
+  }
+  
+  .admin-dashboard {
+    display: flex;
+    width: 100%;
+  }
+  
+  .sidebar {
+    background: #1a1f2b;
+    padding: 2rem 1rem;
+    width: 220px;
+    height: 100vh;
+  }
+  
+  .sidebar h2 {
+    color: #c084fc;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+  }
+  
+  .sidebar nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 1.2rem;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+  
+  .sidebar nav a.active,
+  .sidebar nav a:hover {
+    background: #2f3755;
+  }
+  
+  .main-panel {
+    flex-grow: 1;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-filter {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .search-filter input,
+  .search-filter select {
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: none;
+    font-family: inherit;
+    background: #1e253b;
+    color: white;
+    min-width: 200px;
+  }
+  
+  .analytics {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background: #1e253b;
+    padding: 1.2rem 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+  }
+  
+  .orders-section {
+    margin-top: 2rem;
+  }
+  
+  .orders-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .order-card {
+    background: #1e253b;
+    padding: 1.5rem;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .order-card h4 {
+    margin-bottom: 0.5rem;
+    color: #a5b4fc;
+  }
+  
+  .order-card p {
+    margin: 0.3rem 0;
+  }
+  
+  .order-card a {
+    color: #60a5fa;
+    word-break: break-all;
+  }
+  
+  .order-card .form-details {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    background: #2c3448;
+  }
+  
+  .order-card input[type='text'] {
+    width: 100%;
+    margin-top: 0.7rem;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: none;
+    font-family: inherit;
+    background-color: #313a4e;
+    color: white;
+  }
+  
+  .order-card .btn {
+    margin-top: 0.8rem;
+    margin-right: 0.6rem;
+    background-color: #0077ff;
+    border: none;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .order-card .btn:hover {
+    background-color: #005fcc;
+  }
+  
+  .order-card .btn.reject {
+    background-color: #ef4444;
+  }
+  
+  .order-card .btn.reject:hover {
+    background-color: #dc2626;
+  }
+  
+  .order-card .btn.deliver {
+    background-color: #22c55e;
+  }
+  
+  .order-card .btn.deliver:hover {
+    background-color: #16a34a;
+  }
+  .chat-interface {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    height: 80vh;
+  }
+  
+  .user-list {
+    width: 200px;
+    background: #1a1f2b;
+    border-radius: 10px;
+    overflow-y: auto;
+    padding: 1rem;
+  }
+  
+  .user-item {
+    background: #2c3448;
+    padding: 0.8rem;
+    border-radius: 6px;
+    margin-bottom: 0.6rem;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .user-item.unread::after {
+    content: '•';
+    color: red;
+    margin-left: 6px;
+    font-size: 1.2rem;
+  }
+  
+  .chat-box {
+    flex-grow: 1;
+    background: #1e253b;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .chat-box h3 {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+  }
+  
+  .messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-right: 0.5rem;
+  }
+  
+  .msg {
+    max-width: 70%;
+    padding: 0.6rem;
+    border-radius: 8px;
+    line-height: 1.4;
+  }
+  
+  .msg.user {
+    background: #0077ff;
+    align-self: flex-start;
+    color: white;
+  }
+  
+  .msg.admin {
+    background: #10b981;
+    align-self: flex-end;
+    color: white;
+  }
+  
+  .chat-controls {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  #admin-chat-input {
+    flex: 1;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: none;
+    background: #2c3448;
+    color: white;
+  }
+  
+  #admin-send {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
